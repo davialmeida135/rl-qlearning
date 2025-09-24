@@ -1,0 +1,19 @@
+{
+  "info": {
+    "nome_ambiente": "FrozenLake-8x8",
+    "versao": "v1",
+    "data_treinamento": "2025-09-24T15:56:48.540757",
+    "timestamp": "20250924_155648"
+  },
+  "hiperparametros": {
+    "total_episodios": 100000,
+    "total_passos_max": 50,
+    "taxa_aprendizado": 0.1,
+    "fator_desconto": 0.99,
+    "epsilon_inicial": 1.0,
+    "epsilon_final": 0.13533798996934465,
+    "epsilon_min": 0.01,
+    "taxa_decaimento": 2e-05
+  },
+  "q_table": {
+    
