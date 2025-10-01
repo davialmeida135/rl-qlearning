@@ -288,4 +288,36 @@ epsilon_min = 0.01
 taxa_decaimento = 0.00002
 📊 RESULTADO FINAL: Taxa de sucesso: 100.0% (500/500)
 ```
+### SARSA
 
+
+
+```
+fickle_passenger=False
+
+total_episodios = 200_000
+total_passos_max = 250
+
+taxa_aprendizado = 0.01
+fator_desconto = 1
+
+epsilon = 1.0
+epsilon_min = 0.01
+taxa_decaimento = 0.00002
+
+📊 RESULTADO FINAL: Taxa de sucesso: 100.0% (500/500)
+```
+
+```
+fickle_passenger=True
+total_episodios = 200_000
+total_passos_max = 250
+
+taxa_aprendizado = 0.01
+fator_desconto = 1
+
+epsilon = 1.0
+epsilon_min = 0.01
+taxa_decaimento = 0.00002
+📊 RESULTADO FINAL: Taxa de sucesso: 100.0% (500/500)
+```

@@ -1,0 +1,26 @@
+
+MODELO Q-LEARNING TREINADO
+==========================
+Ambiente: Taxi
+Data: 01/10/2025 15:15:46
+Episódios de treinamento: 200,000
+
+HIPERPARÂMETROS:
+- Taxa de aprendizado: 0.01
+- Fator de desconto: 1
+- Epsilon final: 0.018316
+- Epsilon mínimo: 0.01
+- Taxa de decaimento: 2e-05
+
+ESTATÍSTICAS DA Q-TABLE:
+- Dimensões: (500, 6)
+- Valor máximo: 20.0000
+- Valor mínimo: -65.5616
+- Valor médio: -23.3085
+- Estados visitados: 400/500
+
+ARQUIVOS GERADOS:
+- qlearning_20251001_151546.json (dados completos legíveis)
+- qlearning_20251001_151546.pkl (dados completos compactos)
+- qlearning_20251001_151546_qtable.npy (apenas Q-table)
+- qlearning_20251001_151546_resumo.txt (este resumo)
