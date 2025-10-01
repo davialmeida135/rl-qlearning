@@ -218,41 +218,30 @@ taxa_aprendizado = 0.1
 fator_desconto = 0.99
 
 epsilon = 1.0
-epsilon_min = 0.01
+epsilon_min = 0.1
 taxa_decaimento = 0.00002
 
-📊 RESULTADO FINAL: Taxa de sucesso: 38.39% (19197/50000)
+📊 RESULTADO FINAL: Taxa de sucesso: 38.69% (19343/50000)
 ```
+![alt text](image-2.png)
 
-Teste com uma taxa de aprendizado menor e taxa de decaimento menor e epsilon mínimo maior
-```
-total_episodios = 100_000
-total_passos_max = 250
-
-taxa_aprendizado = 0.05
-fator_desconto = 0.99
-
-epsilon = 1.0
-epsilon_min = 0.1
-taxa_decaimento = 0.0000002
-
-📊 RESULTADO FINAL: Taxa de sucesso: 38.59% (19294/50000)
-```
-
-Teste com taxa de decaimento maior
 ```
 total_episodios = 100_000
 total_passos_max = 250
 
 taxa_aprendizado = 0.05
-fator_desconto = 0.99
+fator_desconto = 0.95
 
 epsilon = 1.0
-epsilon_min = 0.1
-taxa_decaimento = 0.002
+epsilon_min = 0.01
+taxa_decaimento = 0.0001
 
-📊 RESULTADO FINAL: Taxa de sucesso: 38.47% (19236/50000)
+📊 RESULTADO FINAL: Taxa de sucesso: 38.30% (19150/50000)
+Vitórias: 19150((0.383))
+Empates: 2471((0.04942))
+Derrotas: 28379((0.56758))
 ```
+![alt text](image-3.png)
 
 ### SARSA
 
@@ -286,12 +275,15 @@ fator_desconto = 0.95
 epsilon = 1.0
 epsilon_min = 0.01
 taxa_decaimento = 0.0001
+
 📊 RESULTADO FINAL: Taxa de sucesso: 38.57% (19286/50000)
 Vitórias: 19286((0.38572))
 Empates: 2405((0.0481))
 Derrotas: 28309((0.56618))
 ```
 ![alt text](image-1.png)
+
+É possível perceber que, no caso do blackjack, o SARSA e o QLearning se comportam de maneira similar
 
 ## Taxi
 ### Q-Learning
