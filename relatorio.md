@@ -3,6 +3,8 @@ Este relatório apresenta um comparativo de resultados entre dois métodos de di
 
 Aluno: Davi Diógenes Ferreira de Almeida
 
+Link para o repositório: https://github.com/davialmeida135/rl-qlearning
+
 ## Algoritmos
 
 A principal diferença entre o Q-Learning e o SARSA é o modo como ambos lidam com a política aprendida.
