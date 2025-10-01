@@ -253,6 +253,46 @@ taxa_decaimento = 0.002
 
 📊 RESULTADO FINAL: Taxa de sucesso: 38.47% (19236/50000)
 ```
+
+### SARSA
+
+```
+total_episodios = 100_000
+total_passos_max = 250
+
+taxa_aprendizado = 0.1
+fator_desconto = 0.99
+
+epsilon = 1.0
+epsilon_min = 0.1
+taxa_decaimento = 0.00002
+
+📊 RESULTADO FINAL: Taxa de sucesso: 38.46% (19228/50000)
+Vitórias: 19228((0.38456))
+Empates: 2440((0.0488))
+Derrotas: 28332((0.56664))
+```
+![alt text](image.png)
+
+
+Tentei fazer uma mudança mais radical, alterando todos os hiperparâmetros do treinamento, mas os resultados não foram diferentes.
+```
+total_episodios = 100_000
+total_passos_max = 250
+
+taxa_aprendizado = 0.05
+fator_desconto = 0.95
+
+epsilon = 1.0
+epsilon_min = 0.01
+taxa_decaimento = 0.0001
+📊 RESULTADO FINAL: Taxa de sucesso: 38.57% (19286/50000)
+Vitórias: 19286((0.38572))
+Empates: 2405((0.0481))
+Derrotas: 28309((0.56618))
+```
+![alt text](image-1.png)
+
 ## Taxi
 ### Q-Learning
 
