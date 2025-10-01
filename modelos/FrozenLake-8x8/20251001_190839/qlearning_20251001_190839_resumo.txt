@@ -1,0 +1,26 @@
+
+MODELO Q-LEARNING TREINADO
+==========================
+Ambiente: FrozenLake-8x8
+Data: 01/10/2025 19:08:39
+Episódios de treinamento: 250,000
+
+HIPERPARÂMETROS:
+- Taxa de aprendizado: 0.01
+- Fator de desconto: 0.99
+- Epsilon final: 0.010000
+- Epsilon mínimo: 0.01
+- Taxa de decaimento: 2e-05
+
+ESTATÍSTICAS DA Q-TABLE:
+- Dimensões: (64, 4)
+- Valor máximo: 0.9018
+- Valor mínimo: 0.0000
+- Valor médio: 0.2609
+- Estados visitados: 53/64
+
+ARQUIVOS GERADOS:
+- qlearning_20251001_190839.json (dados completos legíveis)
+- qlearning_20251001_190839.pkl (dados completos compactos)
+- qlearning_20251001_190839_qtable.npy (apenas Q-table)
+- qlearning_20251001_190839_resumo.txt (este resumo)

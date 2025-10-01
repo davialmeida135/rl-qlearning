@@ -108,7 +108,7 @@ taxa_decaimento = 0.00002
 📊 RESULTADO FINAL: Taxa de sucesso: 100.0% (500/500)
 ```
 
-Ao tornar o gelo escorregadio, a coisa fica mais complexa e o modelo só alcança 55% de sucesso.
+Ao tornar o gelo escorregadio, a coisa fica mais complexa e o modelo só alcança 35% de sucesso.
 ```
 slippery=True
 total_episodios = 100_000
@@ -121,9 +121,11 @@ epsilon = 1.0
 epsilon_min = 0.01
 taxa_decaimento = 0.00002
 
-RESULTADO FINAL: Taxa de sucesso: 55.0% (275/500)
+📊 RESULTADO FINAL: Taxa de sucesso: 35.8% (179/500)
 ```
-Mesmo com 1 milhão de episódios, o modelo melhorou muito pouco.
+![alt text](image-4.png)
+
+Com 1 milhão de episódios, o modelo melhorou consideravelmente, com seu aprendizado estabilizando em +- 250000 episódios.
 ```
 slippery=True
 
@@ -136,31 +138,35 @@ fator_desconto = 0.99
 epsilon = 1.0
 epsilon_min = 0.01
 taxa_decaimento = 0.00002
-RESULTADO FINAL: Taxa de sucesso: 57.6% (288/500)
+📊 RESULTADO FINAL: Taxa de sucesso: 61.2% (306/500)
 ```
-Houve uma boa melhora ao se anular o fator de desconto
+![alt text](image-5.png)
+
+Mantendo os 250000 episódios, testei anular o fator de desconto e os resultados foram muito ruins
 ```
 total_episodios = 200_000
 total_passos_max = 250
 
-taxa_aprendizado = 0.01
+taxa_aprendizado = 0.1
 fator_desconto = 1
 
 epsilon = 1.0
 epsilon_min = 0.01
 taxa_decaimento = 0.00002
-📊 RESULTADO FINAL: Taxa de sucesso: 61.8% (309/500)
+📊 RESULTADO FINAL: Taxa de sucesso: 13.8% (69/500)
 ```
+![alt text](image-7.png)
+
 ### SARSA
 Para o SARSA, iniciamos na configuração de maior sucesso para o Q-Learning.
 Novamente, o ambiente estocástico foi resolvido com 100% de sucesso.
 ```
 is_slippery=False
-total_episodios = 200_000
+total_episodios = 250_000
 total_passos_max = 250
 
-taxa_aprendizado = 0.01
-fator_desconto = 1
+taxa_aprendizado = 0.1
+fator_desconto = 0.99
 
 epsilon = 1.0
 epsilon_min = 0.01
@@ -171,25 +177,44 @@ taxa_decaimento = 0.00002
 Já no ambiente estocástico, com as mesmas cofigurações do Q-Learning, os resultados foram consideravelmente piores.
 ```
 is_slippery=True
-total_episodios = 200_000
+total_episodios = 250_000
 total_passos_max = 250
 
-taxa_aprendizado = 0.01
-fator_desconto = 1
+taxa_aprendizado = 0.1
+fator_desconto = 0.99
 
 epsilon = 1.0
 epsilon_min = 0.01
 taxa_decaimento = 0.00002
 
-📊 RESULTADO FINAL: Taxa de sucesso: 49.4% (247/500)
+📊 RESULTADO FINAL: Taxa de sucesso: 22.8% (114/500)
 ```
 
-Em seguida, foram feitos experimentos em cima do vaor do learning rate.
-Com os resultados abaixo, podemos ver que learning rates extremos não são benéficos e que o learning rate afeta muito a qualidade dos resultados.
+![alt text](image-6.png)
+
+Em seguida, foram feitos experimentos em cima do valor do learning rate.
+Com os resultados abaixo, podemos ver que learning rates extremos não são benéficos para o SARSA e que o learning rate afeta muito a qualidade dos resultados.
+O learning rate mais intermediário (0.01) alcançou um resultado até melhor que o Q-Learning
 
 ```
 is_slippery=True
-total_episodios = 200_000
+total_episodios = 250_000
+total_passos_max = 250
+
+taxa_aprendizado = 0.01
+fator_desconto = 0.99
+
+epsilon = 1.0
+epsilon_min = 0.01
+taxa_decaimento = 0.00002
+📊 RESULTADO FINAL: Taxa de sucesso: 63.4% (317/500)
+```
+![alt text](image-8.png)
+
+
+```
+is_slippery=True
+total_episodios = 250_000
 total_passos_max = 250
 
 taxa_aprendizado = 0.001
@@ -198,22 +223,10 @@ fator_desconto = 0.99
 epsilon = 1.0
 epsilon_min = 0.01
 taxa_decaimento = 0.00002
-📊 RESULTADO FINAL: Taxa de sucesso: 1.8% (9/500)
+📊 RESULTADO FINAL: Taxa de sucesso: 3.0% (15/500)
 ```
+![alt text](image-9.png)
 
-```
-is_slippery=True
-total_episodios = 200_000
-total_passos_max = 250
-
-taxa_aprendizado = 0.1
-fator_desconto = 1
-
-epsilon = 1.0
-epsilon_min = 0.01
-taxa_decaimento = 0.00002
-📊 RESULTADO FINAL: Taxa de sucesso: 13.2% (66/500)
-```
 ## Blackjack
 ### QLearning
 ```
@@ -330,9 +343,6 @@ taxa_decaimento = 0.00002
 📊 RESULTADO FINAL: Taxa de sucesso: 100.0% (500/500)
 ```
 ### SARSA
-
-
-
 ```
 fickle_passenger=False
 
@@ -348,7 +358,7 @@ taxa_decaimento = 0.00002
 
 📊 RESULTADO FINAL: Taxa de sucesso: 100.0% (500/500)
 ```
-
+Com ficke passenger
 ```
 fickle_passenger=True
 total_episodios = 200_000
