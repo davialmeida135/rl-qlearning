@@ -1,6 +1,8 @@
 # Relatório
 Este relatório apresenta um comparativo de resultados entre dois métodos de diferença temporal, o SARSA e o Q-Learning, em três diferentes ambientes do Gymnasium: Frozen Lake, BlackJack e Taxi.
 
+Aluno: Davi Diógenes Ferreira de Almeida
+
 ## Algoritmos
 
 A principal diferença entre o Q-Learning e o SARSA é o modo como ambos lidam com a política aprendida.
@@ -150,6 +152,8 @@ taxa_decaimento = 0.00002
 📊 RESULTADO FINAL: Taxa de sucesso: 61.8% (309/500)
 ```
 ### SARSA
+Para o SARSA, iniciamos na configuração de maior sucesso para o Q-Learning.
+Novamente, o ambiente estocástico foi resolvido com 100% de sucesso.
 ```
 is_slippery=False
 total_episodios = 200_000
@@ -164,6 +168,7 @@ taxa_decaimento = 0.00002
 📊 RESULTADO FINAL: Taxa de sucesso: 100.0% (500/500)
 ```
 
+Já no ambiente estocástico, com as mesmas cofigurações do Q-Learning, os resultados foram consideravelmente piores.
 ```
 is_slippery=True
 total_episodios = 200_000
@@ -179,6 +184,7 @@ taxa_decaimento = 0.00002
 📊 RESULTADO FINAL: Taxa de sucesso: 49.4% (247/500)
 ```
 
+Em seguida, foram feitos experimentos em cima do vaor do learning rate.
 Com os resultados abaixo, podemos ver que learning rates extremos não são benéficos e que o learning rate afeta muito a qualidade dos resultados.
 
 ```
@@ -225,6 +231,8 @@ taxa_decaimento = 0.00002
 ```
 ![alt text](image-2.png)
 
+Tentei fazer uma mudança mais radical, alterando todos os hiperparâmetros do treinamento, mas os resultados não foram diferentes.
+Durante o treinamento, houveram alguns picos de performance mais alta (+-40%), nas ao final o resultado permaneceu o mesmo do treinamento anterior.
 ```
 total_episodios = 100_000
 total_passos_max = 250
@@ -286,8 +294,9 @@ Derrotas: 28309((0.56618))
 É possível perceber que, no caso do blackjack, o SARSA e o QLearning se comportam de maneira similar
 
 ## Taxi
-### Q-Learning
 
+O ambiente Taxi, em geral, se mostrou de fácil resolução tanto para o SARSA quanto para o Q-Learning, uma vez que ambos apresentaram 100% de taxa de sucesso até na configuração de maior complexidade (com o passageiro podendo mudar a rota).
+### Q-Learning
 
 ```
 fickle_passenger=False
